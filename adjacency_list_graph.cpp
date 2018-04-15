@@ -33,30 +33,6 @@ unsigned long long int tcount::adjacency_list_graph::number_of_nodes() {
     return this->g->size();
 }
 
-unsigned long tcount::node_iterator(tcount::adjacency_list_graph &g) {
-    for(auto pair: g) {
-        auto vec = pair.second;
-        std::sort(vec.begin(), vec.end());
-    }
-
-    unsigned long t = 0;
-
-    for(auto pair: g) {
-        unsigned long node = pair.first;
-
-        for(auto n1: g[node]) {
-            for(auto n2: g[node]){
-                if(std::binary_search(g[n1].begin(), g[n1].end(), n2)) {
-                    t += 1;
-                }
-            }
-        }
-    }
-
-    t = t / 6;
-    return t;
-}
-
 bool node_order_sort(std::pair<unsigned int, unsigned int> vec1, std::pair<unsigned int, unsigned int> vec2) {
     return vec1.second < vec2.second;
 }
