@@ -1,5 +1,5 @@
 //
-// Created by Ruben on 30/03/2018.
+//
 //
 
 #include "sampler_edge_array.h"
@@ -19,11 +19,23 @@ tcount::sampler_edge_array::~sampler_edge_array() {
     delete (g, node_array, edge_array);
 }
 
+/**
+ * Add an edge e = (u, v) to the undirected graph stored in the sampler.
+ *
+ * @param u The node u of edge e
+ * @param v The node v of the edge e
+ */
 void tcount::sampler_edge_array::add_edge(unsigned long u, unsigned long v) {
     (*g)[u].insert(v);
     (*g)[v].insert(u);
 }
 
+/**
+ * Builds the edge array based on the edges added to the undirected graph structure.
+ *
+ * @param relabel If set to true, edges will be re-labeled such that they are consecutive. This
+ * should be set to true if nodes added are not consecutively labeled or you are not sure if they are.
+ */
 void tcount::sampler_edge_array::build_edge_array(bool relabel) {
     //sort map keys, then build off that
     //or just assume all is okay and work off using the map size
@@ -76,6 +88,15 @@ void tcount::sampler_edge_array::build_edge_array(bool relabel) {
     this->g = nullptr;
 }
 
+/**
+ * Samples the specified number of triangles and returns an approximation of
+ * the number of triangles in the edge array stored in the sampler.
+ *
+ * The edge array must be build first before this function is called.
+ *
+ * @param number_of_samples The number of samples to perform.
+ * @return An approximation of the triangle count of the graph.
+ */
 unsigned long tcount::sampler_edge_array::sample_triangles(unsigned long number_of_samples) {
     std::vector<unsigned long> node_array_ = *node_array;
     std::vector<unsigned long> edge_array_ = *edge_array;

@@ -1,5 +1,5 @@
 //
-// Created by Ruben on 11/03/2018.
+//
 //
 
 #ifndef TRIANGLECOUNTINGAPI_GPSPOSTSTREAM_H

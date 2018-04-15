@@ -22,7 +22,7 @@ namespace tcount {
 }
 
 namespace tcount {
-    unsigned long count_triangles(adjacency_matrix_graph g);
+    //unsigned long count_triangles(adjacency_matrix_graph g);
 }
 
 #endif //TRIANGLECOUNTINGAPI_ADJACENCY_MATRIX_GRAPH_H

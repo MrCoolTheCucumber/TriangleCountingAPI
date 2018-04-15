@@ -1,5 +1,5 @@
 //
-// Created by Ruben on 30/03/2018.
+// 
 //
 
 #ifndef TRIANGLECOUNTINGAPI_SAMPLER_EDGE_ARRAY_H

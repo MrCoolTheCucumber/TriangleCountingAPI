@@ -1,5 +1,5 @@
 //
-// Created by Ruben on 13/03/2018.
+// A class for reperesenting an adjacency matrix.
 //
 
 #include "adjacency_matrix_graph.h"
@@ -29,9 +29,5 @@ void tcount::adjacency_matrix_graph::remove_edge(unsigned long u, unsigned long 
 
 std::vector<unsigned long> tcount::adjacency_matrix_graph::operator[](unsigned long i) {
     return (*g)[i];
-}
-
-unsigned long tcount::count_triangles(adjacency_matrix_graph g) {
-    //TODO matrix multiplication?
 }
 

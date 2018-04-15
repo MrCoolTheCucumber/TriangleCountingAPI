@@ -22,7 +22,6 @@ namespace tcount {
 }
 
 namespace tcount {
-    unsigned long node_iterator(adjacency_list_graph &g);
     unsigned long forward(adjacency_list_graph &g);
 }
 

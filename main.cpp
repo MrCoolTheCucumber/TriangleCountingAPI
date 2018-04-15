@@ -7,7 +7,6 @@
 #include "adjacency_list_graph.h"
 #include "sampler.h"
 #include "sampler_edge_array.h"
-#include <boost/timer.hpp>
 #include <iomanip>
 
 void gps_example(const char* filename, long res_size) {

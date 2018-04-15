@@ -1,5 +1,5 @@
 //
-// Created by Ruben on 18/03/2018.
+// A class that represents edge sampling that utilizes an adjacency list structure.
 //
 
 #include <chrono>
@@ -15,11 +15,24 @@ tcount::sampler::~sampler() {
     delete g;
 }
 
+/**
+ * Add an edge e = (u, v) to the undirected graph stored in the sampler.
+ *
+ * @param u The node u of edge e
+ * @param v The node v of the edge e
+ */
 void tcount::sampler::add_edge(unsigned long u, unsigned long v) {
     (*g)[u].insert(v);
     (*g)[v].insert(u);
 }
 
+/**
+ * Samples the specified number of triangles and returns an approximation of
+ * the number of triangles in the undirected graph stored in the sampler.
+ *
+ * @param number_of_samples The number of samples to perform.
+ * @return An approximation of the triangle count of the graph.
+ */
 unsigned long tcount::sampler::sample_triangles(unsigned long number_of_samples) {
 
     unsigned int seed = static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count());

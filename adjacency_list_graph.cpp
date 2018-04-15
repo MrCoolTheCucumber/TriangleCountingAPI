@@ -1,5 +1,6 @@
 //
-// Created by Ruben on 13/03/2018.
+// A class for representing an adjacency list as well as providing triangle ccounting algorithms
+// that can be performed on the adjacency list graphs.
 //
 
 #include <algorithm>
