@@ -78,7 +78,7 @@ long doulion_example_sampling(const char* filename, long samples, double p) {
     }
     sampler.build_edge_array(true);
 
-    unsigned long val = sampler.sample_triangles(500000);
+    unsigned long val = sampler.sample_triangles(samples);
 
     double e = 1.0 / (p*p*p);
     double t = val * e;

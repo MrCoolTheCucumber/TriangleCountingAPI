@@ -1,5 +1,5 @@
 //
-// 
+//
 //
 
 #ifndef TRIANGLECOUNTINGAPI_SAMPLER_EDGE_ARRAY_H
