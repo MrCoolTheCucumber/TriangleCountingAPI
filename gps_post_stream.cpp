@@ -63,7 +63,6 @@ void tcount::gps_post_stream::add_edge(unsigned long u, unsigned long v) {
 
 unsigned long long tcount::gps_post_stream::compute_triangle_count() {
     unsigned long long N_t = 0;
-    std::cout << "z_star: " << this->z_star << std::endl;
 
     while (!res->empty()) {
         auto edge = res->top();

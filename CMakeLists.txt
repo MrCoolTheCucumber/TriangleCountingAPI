@@ -3,7 +3,11 @@ project(TriangleCountingAPI)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories("E:\\Downloads\\boost_1_65_1\\boost_1_65_1")
+if (WIN32)
+    #REPLACE PATH
+    include_directories("E:\\Downloads\\boost_1_65_1\\boost_1_65_1")
+endif (WIN32)
+
 
 add_definitions( "-m64" )
 
